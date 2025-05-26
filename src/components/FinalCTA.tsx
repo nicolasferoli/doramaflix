@@ -19,13 +19,7 @@ export const FinalCTA: React.FC = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row justify-center items-center gap-8 mb-10">
-            <div className="text-center sm:text-left">
-              <p className="text-lg mb-2">📞 <span className="font-bold">Dúvidas?</span></p>
-              <p className="text-[#E50914]">WhatsApp: (21) 9999-9999</p>
-            </div>
-            
-            <div className="h-px w-full sm:h-20 sm:w-px bg-gray-800"></div>
-            
+                      
             <div className="text-center">
               <div className="flex justify-center mb-2">
                 <svg className="w-8 h-8 text-[#E50914]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,16 +32,12 @@ export const FinalCTA: React.FC = () => {
             </div>
           </div>
           
-          <div className="flex justify-center">
-            <Button href="#secao-planos" className="bg-[#E50914] hover:bg-[#E50914]/90 text-lg px-8 py-4">
-              👉 ACESSAR SITE OFICIAL
-            </Button>
-          </div>
+         
         </div>
       </div>
       
       <footer className="max-w-5xl mx-auto px-4 mt-16 text-center text-gray-500 text-sm">
-        <p>© 2025 TotalStreaming. Todos os direitos reservados.</p>
+        <p>© 2025 DoramaFlix. Todos os direitos reservados.</p>
         <p className="mt-2">
           <a href="#" className="hover:text-[#E50914] hover:underline mx-2">Termos de Uso</a> | 
           <a href="#" className="hover:text-[#E50914] hover:underline mx-2">Política de Privacidade</a>

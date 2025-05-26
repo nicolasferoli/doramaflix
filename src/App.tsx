@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Hero } from './components/Hero';
 import { LogoCarousel } from './components/LogoCarousel';
+import { MovieCarousel } from './components/MovieCarousel';
 import { Features } from './components/Features';
 import { ContentDetails } from './components/ContentDetails';
 import { PricingComparison } from './components/PricingComparison';
@@ -12,7 +13,7 @@ import { FinalCTA } from './components/FinalCTA';
 function App() {
   useEffect(() => {
     // Update the page title
-    document.title = "TotalStreaming: Todos os Streamings em Um Só Lugar";
+    document.title = "DoramaFlix: Todos os Filmes e Séries em Um Só Lugar";
     
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -34,6 +35,7 @@ function App() {
     <div className="bg-black text-white font-sans">
       <Hero />
       <LogoCarousel />
+      <MovieCarousel />
       <Features />
       <ContentDetails />
       <PricingComparison />

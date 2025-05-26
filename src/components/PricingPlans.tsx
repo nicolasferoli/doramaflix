@@ -110,9 +110,6 @@ export const PricingPlans: React.FC = () => {
         </div>
         
         <div className="text-center mt-12">
-          <Button href="#" className="bg-[#E50914] hover:bg-[#E50914]/90">
-            ⏰ QUERO MEU DESCONTO!
-          </Button>
           <p className="mt-4 text-gray-400">
             Oferta por tempo limitado. Preços sujeitos a alteração sem aviso prévio.
           </p>

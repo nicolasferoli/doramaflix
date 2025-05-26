@@ -12,13 +12,13 @@ export const Hero: React.FC = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 opacity-50"
         style={{ 
-          backgroundImage: 'url("https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")',
+          backgroundImage: 'url("/src/images/background.jpg")',
         }}
       ></div>
       
       <div className="relative z-20 max-w-5xl mx-auto">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white animate-fade-in">
-          🚀 <span className="text-[#E50914]">TOTALSTREAMING</span>: TODOS OS STREAMINGS EM UM SÓ LUGAR!
+          🚀 <span className="text-[#E50914]">DORAMAFLIX</span>: TODOS OS FILMES E SÉRIES EM UM SÓ LUGAR!
         </h1>
         
         <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white">

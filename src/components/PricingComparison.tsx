@@ -55,7 +55,7 @@ export const PricingComparison: React.FC = () => {
             <div className="absolute top-0 right-0 bg-[#E50914] text-white px-4 py-1 rounded-bl-lg font-bold">
               MELHOR OPÇÃO
             </div>
-            <h3 className="text-xl mb-6 mt-4">TotalStreaming:</h3>
+            <h3 className="text-xl mb-6 mt-4">DoramaFlix:</h3>
             <div className="flex justify-between items-center">
               <span className="text-3xl font-bold">APENAS</span>
               <div className="text-right">
