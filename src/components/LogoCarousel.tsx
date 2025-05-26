@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import AppleTVLogo from '../images/Apple_TV_Plus_Logo 1.svg';
 
 const logos = [
   {
@@ -15,7 +16,7 @@ const logos = [
   },
   {
     name: 'Apple TV',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/2/28/Apple_TV_Plus_Logo.svg',
+    src: AppleTVLogo,
   },
   {
     name: 'Globo Play',
