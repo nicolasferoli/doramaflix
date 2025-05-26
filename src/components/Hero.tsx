@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from './Button';
 import { PlayCircle } from 'lucide-react';
+import backgroundImg from '../images/background.jpg';
 
 export const Hero: React.FC = () => {
   return (
@@ -8,17 +9,17 @@ export const Hero: React.FC = () => {
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black z-10"></div>
       
-      {/* Background image - Netflix style with dark overlay */}
+      {/* Background image - Netflix style com overlay escuro */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 opacity-50"
         style={{ 
-          backgroundImage: 'url("/src/images/background.jpg")',
+          backgroundImage: `url(${backgroundImg})`,
         }}
       ></div>
       
       <div className="relative z-20 max-w-5xl mx-auto">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white animate-fade-in">
-          🚀 <span className="text-[#E50914]">DORAMAFLIX</span>: TODOS OS FILMES E SÉRIES EM UM SÓ LUGAR!
+          🚀 <span className="text-[#E50914]">DORAMAFLIX</span>: TODOS OS DORAMAS E SÉRIES EM UM SÓ LUGAR!
         </h1>
         
         <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white">
