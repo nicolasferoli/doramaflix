@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --netflix-red: #E50914;
+  --netflix-black: #141414;
+  --netflix-dark-gray: #222222;
+  --netflix-light-gray: #E5E5E5;
+}
+
+body {
+  background-color: black;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Custom animations */
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 1.2s ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--netflix-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--netflix-dark-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--netflix-red);
+}
+
+/* Button glow effect */
+.button-glow:hover {
+  box-shadow: 0 0 15px var(--netflix-red);
+}
+
+/* Smooth transitions */
+a, button {
+  transition: all 0.3s ease;
+}
