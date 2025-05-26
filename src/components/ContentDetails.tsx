@@ -24,7 +24,7 @@ const ContentCard: React.FC<ContentCardProps> = ({
       <img
         src={image}
         alt={alt}
-        className="w-full h-52 object-cover rounded-[8px] mb-4"
+        className="w-full h-42 object-cover rounded-[8px] mb-4"
       />
       <div className="font-bold text-lg mb-1">{title}</div>
       <p className="text-gray-300">{description}</p>
