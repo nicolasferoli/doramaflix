@@ -21,7 +21,11 @@ const ContentCard: React.FC<ContentCardProps> = ({
 }) => {
   return (
     <div className="bg-black/40 p-5 rounded-lg transform transition-all hover:bg-[#E50914]/10 hover:shadow-lg flex flex-col items-center text-center">
-      <img src={image} alt={alt} className="w-full h-32 object-cover mb-2" style={{ borderRadius: '8px' }} />
+      <img
+        src={image}
+        alt={alt}
+        className="w-full h-52 object-cover rounded-[8px] mb-4"
+      />
       <div className="font-bold text-lg mb-1">{title}</div>
       <p className="text-gray-300">{description}</p>
     </div>
