@@ -7,9 +7,10 @@ interface PlanProps {
   originalPrice: string;
   currentPrice: string;
   discount: string;
-  period: string;
   features: string[];
+  exclusiveShows?: string[];
   recommended?: boolean;
+  bgColor?: string;
 }
 
 const Plan: React.FC<PlanProps> = ({ 
@@ -17,102 +18,149 @@ const Plan: React.FC<PlanProps> = ({
   originalPrice, 
   currentPrice, 
   discount, 
-  period,
   features,
-  recommended = false 
+  exclusiveShows,
+  recommended = false,
+  bgColor = '#1F1F1F'
 }) => {
   return (
     <div className={`
-      p-6 rounded-lg border-2 transition-transform duration-300 hover:scale-105
-      ${recommended 
-        ? 'border-[#E50914] bg-[#E50914]/10 shadow-lg' 
-        : 'border-gray-800 bg-[#141414]'
-      }
-    `}>
+      p-6 rounded-lg transition-transform duration-300 hover:scale-105
+      ${recommended ? 'relative' : ''}
+    `}
+    style={{ backgroundColor: bgColor }}
+    >
       {recommended && (
-        <div className="bg-[#E50914] text-white font-bold py-1 px-4 rounded-full text-sm inline-block mb-4">
-          MAIS POPULAR
+        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#E50914] text-white font-bold py-1 px-4 rounded-full text-sm">
+          Mais vendido
         </div>
       )}
       
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <h3 className="text-2xl font-bold mb-4 text-[#E50914]">{title}</h3>
       
       <div className="mb-4">
         <span className="line-through text-gray-400">{originalPrice}</span>
         <div className="flex items-baseline gap-2">
           <span className="text-3xl font-bold">{currentPrice}</span>
-          <span className="text-gray-300">{period}</span>
+          <span className="text-gray-300">/mês</span>
         </div>
         <span className="inline-block mt-1 bg-[#E50914]/20 text-[#E50914] font-bold px-2 py-1 rounded-sm text-sm">
           {discount} OFF
         </span>
       </div>
       
-      <ul className="mb-6 space-y-2">
+      <ul className="mb-6 space-y-3">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start">
-            <Check className="w-5 h-5 text-[#E50914] mr-2 flex-shrink-0" />
+            <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
             <span className="text-gray-300">{feature}</span>
           </li>
         ))}
       </ul>
+
+      {exclusiveShows && (
+        <>
+          <p className="text-gray-300 mb-2">Séries exclusiva inclusas neste plano:</p>
+          <ul className="mb-6 space-y-2">
+            {exclusiveShows.map((show, index) => (
+              <li key={index} className="flex items-center">
+                <span className="mr-2">🎬</span>
+                <span className="text-gray-300">{show}</span>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
       
       <Button 
         href="#" 
-        className={recommended ? 'bg-[#E50914] hover:bg-[#E50914]/90' : ''}
+        className="bg-[#E50914] hover:bg-[#E50914]/90 w-full"
       >
         QUERO ESTE PLANO
       </Button>
+
+      <p className="text-sm text-gray-400 mt-4 text-center">
+        Receba +15% de desconto pagando via cartão de crédito.
+      </p>
     </div>
   );
 };
 
 export const PricingPlans: React.FC = () => {
-  // Common features for both plans
-  const commonFeatures = [
-    "Acesso a todos os canais e plataformas",
-    "Suporte técnico 24/7",
-    "Até 3 telas simultâneas",
-    "Qualidade Full HD/4K",
-    "App para todos os dispositivos"
+  const premiumShows = [
+    "A vida secreta do meu marido bilionário",
+    "A companheira amaldiçoada do alfa",
+    "Meu mundo termina com você",
+    "Casamento acidental com meu CEO pobre",
+    "Betty aparelhuda - Brace Face Betty",
+    "Saia da frente! Eu sou o chefe final!",
+    "Não despertem o dragão dormindo",
+    "Como conquistar uma raposa prateada",
+    "Você pertence a mim",
+    "The Mafia Boss"
+  ];
+
+  const prataShows = [
+    "A vida secreta do meu marido bilionário",
+    "A companheira amaldiçoada do alfa",
+    "Meu mundo termina com você",
+    "Casamento acidental com meu CEO pobre",
+    "Betty aparelhuda - Brace Face Betty"
   ];
 
   return (
     <section id="secao-planos" className="py-16 bg-black text-white">
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-center">
           ⚡ <span className="text-[#E50914]">PLANOS DISPONÍVEIS</span>
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           <Plan 
-            title="Plano Mensal"
-            originalPrice="R$ 37,80"
-            currentPrice="R$ 29,90"
-            discount="20%"
-            period="/mês"
-            features={commonFeatures}
+            title="PLANO BASIC"
+            originalPrice="R$29,90"
+            currentPrice="R$15,90"
+            discount="50%"
+            features={[
+              "Acesso a +400 séries",
+              "Até 3 telas simultâneas",
+              "Qualidade Full HD/4K",
+              "Suporte técnico 24/7"
+            ]}
+            bgColor="#1F1F1F"
           />
           
           <Plan 
-            title="Plano Anual"
-            originalPrice="R$ 299,80"
-            currentPrice="R$ 149,90"
-            discount="50%"
-            period="/ano"
+            title="PLANO PRATA"
+            originalPrice="R$49,90"
+            currentPrice="R$21,90"
+            discount="60%"
             features={[
-              ...commonFeatures,
-              "Economize R$150 por ano",
-              "Acesso prioritário a novos lançamentos"
+              "Acesso a +700 séries atualizadas",
+              "Até 3 telas simultâneas",
+              "Qualidade Full HD/4K",
+              "Suporte técnico 24/7"
             ]}
-            recommended={true}
+            exclusiveShows={prataShows}
+            bgColor="#1F1F1F"
           />
-        </div>
-        
-        <div className="text-center mt-12">
-          <p className="mt-4 text-gray-400">
-            Oferta por tempo limitado. Preços sujeitos a alteração sem aviso prévio.
-          </p>
+
+          <Plan 
+            title="PLANO PREMIUM"
+            originalPrice="R$97,90"
+            currentPrice="R$29,90"
+            discount="60%"
+            features={[
+              "Acesso a +700 séries atualizadas",
+              "Até 3 telas simultâneas",
+              "Qualidade Full HD/4K",
+              "Suporte técnico 24/7",
+              "+1500 séries atualizadas"
+            ]}
+            exclusiveShows={premiumShows}
+            recommended={true}
+            bgColor="#1F1F1F"
+          />
         </div>
       </div>
     </section>

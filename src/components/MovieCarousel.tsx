@@ -1,81 +1,53 @@
 import React, { useRef, useEffect } from 'react';
+import img1 from '../images/1.png';
+import img2 from '../images/2.png';
+import img3 from '../images/3.png';
+import img4 from '../images/4.png';
+import img5 from '../images/5.png';
+import img6 from '../images/6.png';
+import img7 from '../images/7.png';
+import img8 from '../images/8.png';
+import img9 from '../images/9.png';
+import img10 from '../images/10.png';
+import img11 from '../images/11.png';
+import img12 from '../images/12.png';
+import img13 from '../images/13.png';
+import img14 from '../images/14.png';
+import img15 from '../images/15.png';
+import img16 from '../images/16.png';
+import img17 from '../images/17.png';
+import img18 from '../images/18.png';
+import img19 from '../images/19.png';
+import img20 from '../images/20.png';
+import img21 from '../images/21.png';
+import img22 from '../images/22.png';
 
 const moviesTop = [
-  {
-    title: 'Oppenheimer',
-    image: 'https://image.tmdb.org/t/p/w500/ptpr0kGAckfQkJeJIt8st5dglvd.jpg',
-  },
-  {
-    title: 'Barbie',
-    image: 'https://image.tmdb.org/t/p/w500/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg',
-  },
-  {
-    title: 'John Wick 4',
-    image: 'https://image.tmdb.org/t/p/w500/gh2bmprLtUQ8oXCSluzfqaicyrm.jpg',
-  },
-  {
-    title: 'Homem-Aranha: Através do Aranhaverso',
-    image: 'https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg',
-  },
-  {
-    title: 'Super Mario Bros. O Filme',
-    image: 'https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg',
-  },
-  {
-    title: 'Guardiões da Galáxia Vol. 3',
-    image: 'https://image.tmdb.org/t/p/w500/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg',
-  },
-  {
-    title: 'Avatar: O Caminho da Água',
-    image: 'https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg',
-  },
-  {
-    title: 'Velozes e Furiosos 10',
-    image: 'https://image.tmdb.org/t/p/w500/fiVW06jE7z9YnO4trhaMEdclSiC.jpg',
-  },
-  {
-    title: 'Elementos',
-    image: 'https://image.tmdb.org/t/p/w500/4Y1WNkd88JXmGfhtWR7dmDAo1T2.jpg',
-  },
-  {
-    title: 'Indiana Jones e a Relíquia do Destino',
-    image: 'https://image.tmdb.org/t/p/w500/Af4bXE63pVsb2FtbW8uYIyPBadD.jpg',
-  },
+  { title: 'Série 1', image: img1 },
+  { title: 'Série 2', image: img2 },
+  { title: 'Série 3', image: img3 },
+  { title: 'Série 4', image: img4 },
+  { title: 'Série 5', image: img5 },
+  { title: 'Série 6', image: img6 },
+  { title: 'Série 7', image: img7 },
+  { title: 'Série 8', image: img8 },
+  { title: 'Série 9', image: img9 },
+  { title: 'Série 10', image: img10 },
+  { title: 'Série 11', image: img11 },
 ];
 
 const moviesBottom = [
-  {
-    title: 'The Last of Us',
-    image: 'https://media.themoviedb.org/t/p/w440_and_h660_face/el1KQzwdIm17I3A6cYPfsVIWhfX.jpg',
-  },
-  {
-    title: 'Lilo & Stitch',
-    image: 'https://media.themoviedb.org/t/p/w440_and_h660_face/toLU4HzWf2iKqPbElKPDypKNGTr.jpg',
-  },
-  {
-    title: 'Minecraft',
-    image: 'https://media.themoviedb.org/t/p/w440_and_h660_face/4VtkIaj76TpQNfhDHXQDdT9uBN5.jpg',
-  },
-  {
-    title: 'Karatê Kid: Lendas',
-    image: 'https://media.themoviedb.org/t/p/w440_and_h660_face/gnuSSOVBVWlKL8dFEGKRoOiiKTS.jpg',
-  },
-  {
-    title: 'Thunderbolts*',
-    image: 'https://media.themoviedb.org/t/p/w440_and_h660_face/eKD2p840nsRXLUR25ciVsNMJgOB.jpg',
-  },
-  {
-    title: 'Sonic 3: O Filme',
-    image: 'https://media.themoviedb.org/t/p/w440_and_h660_face/tfM1T6tAivjvy0sLwt6Y9WvlmzB.jpg',
-  },
-  {
-    title: 'Branca de Neve',
-    image: 'https://media.themoviedb.org/t/p/w440_and_h660_face/t0mabA2l3KE9Ai350BEKz61Ltor.jpg',
-  },
-  {
-    title: 'Capitão América',
-    image: 'https://media.themoviedb.org/t/p/w440_and_h660_face/5nbSgP8f5LMCI0PwVRRaHJaUmR3.jpg',
-  },
+  { title: 'Série 12', image: img12 },
+  { title: 'Série 13', image: img13 },
+  { title: 'Série 14', image: img14 },
+  { title: 'Série 15', image: img15 },
+  { title: 'Série 16', image: img16 },
+  { title: 'Série 17', image: img17 },
+  { title: 'Série 18', image: img18 },
+  { title: 'Série 19', image: img19 },
+  { title: 'Série 20', image: img20 },
+  { title: 'Série 21', image: img21 },
+  { title: 'Série 22', image: img22 },
 ];
 
 function useInfiniteCarousel(ref: React.RefObject<HTMLDivElement>, direction: 'right' | 'left') {
@@ -124,8 +96,8 @@ export const MovieCarousel: React.FC = () => {
   return (
     <section className="py-12 bg-black">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-white text-center">
-          🎬 Todos os filmes e séries em um só lugar!
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-white text-center max-w-[600px] mx-auto">
+          🎬 Mais de 1500 séries atualizadas para você maratonar e se divertir!
         </h2>
         <div className="flex flex-col gap-8">
           {/* Carrossel de cima (direita) */}

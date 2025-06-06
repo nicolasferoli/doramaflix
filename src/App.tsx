@@ -3,12 +3,11 @@ import { Hero } from './components/Hero';
 import { LogoCarousel } from './components/LogoCarousel';
 import { MovieCarousel } from './components/MovieCarousel';
 import { Features } from './components/Features';
-import { ContentDetails } from './components/ContentDetails';
 import { PricingComparison } from './components/PricingComparison';
 import { Testimonials } from './components/Testimonials';
 import { PricingPlans } from './components/PricingPlans';
 import { Guarantee } from './components/Guarantee';
-import { FinalCTA } from './components/FinalCTA';
+import { FAQ } from './components/FAQ';
 
 function App() {
   useEffect(() => {
@@ -37,12 +36,11 @@ function App() {
       <LogoCarousel />
       <MovieCarousel />
       <Features />
-      <ContentDetails />
       <PricingComparison />
       <Testimonials />
       <PricingPlans />
       <Guarantee />
-      <FinalCTA />
+      <FAQ />
     </div>
   );
 }

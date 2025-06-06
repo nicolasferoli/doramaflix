@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from './Button';
-import { Users, MonitorSmartphone, MonitorPlay } from 'lucide-react';
+import { Users, MonitorSmartphone, MonitorPlay, PlayCircle, Shield, Trophy, Lock } from 'lucide-react';
 
 export const Features: React.FC = () => {
   return (
@@ -9,20 +9,6 @@ export const Features: React.FC = () => {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-center">
           📺 <span className="text-[#E50914]">SEU UNIVERSO</span> DE ENTRETENIMENTO
         </h2>
-        
-        <div className="flex flex-wrap justify-center gap-4 mb-10 text-xl">
-          <div className="flex items-center bg-black/30 px-4 py-2 rounded-full">
-            <span className="font-bold">4.000+ Canais</span>
-          </div>
-          <div className="hidden sm:block">|</div>
-          <div className="flex items-center bg-black/30 px-4 py-2 rounded-full">
-            <span className="font-bold">50.000+ Filmes/Séries</span>
-          </div>
-          <div className="hidden sm:block">|</div>
-          <div className="flex items-center bg-black/30 px-4 py-2 rounded-full">
-            <span className="font-bold">Todas as Plataformas Integradas</span>
-          </div>
-        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div className="bg-black/40 p-6 rounded-lg transform transition-transform hover:scale-105 text-center">
@@ -39,15 +25,36 @@ export const Features: React.FC = () => {
           
           <div className="bg-black/40 p-6 rounded-lg transform transition-transform hover:scale-105 text-center">
             <MonitorSmartphone className="mx-auto mb-3 w-10 h-10 text-[#E50914]" />
-            <p className="text-lg mb-1 font-bold">App exclusivo para Smart TV, Celular e PC</p>
-            <p className="text-gray-400">Acesse de qualquer lugar</p>
+            <p className="text-lg mb-1 font-bold">Assista em qualquer lugar </p>
+            <p className="text-gray-400">(Smart TV, Celular e PC)</p>
           </div>
         </div>
         
-        <div className="flex justify-center">
-          <Button href="#secao-planos">
-            QUERO ASSINAR AGORA!
+        <div className="flex flex-col items-center">
+          <Button href="#secao-planos" className="group flex items-center justify-center gap-2 text-lg px-8 py-4 max-w-[600px] mx-auto">
+            <PlayCircle className="w-6 h-6 group-hover:animate-pulse" />
+            <span className="font-bold">QUERO ASSINAR AGORA!</span>
           </Button>
+          
+          {/* Ícones de garantia */}
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-8 mt-8 mb-6">
+            <div className="flex flex-col items-center text-white w-[100px] sm:w-[142px]">
+              <Shield className="w-6 h-6 sm:w-10 sm:h-10 text-[#E50914]" />
+              <span className="text-[10px] sm:text-sm mt-1 sm:mt-2 text-center">Compra Segura</span>
+            </div>
+            <div className="flex flex-col items-center text-white w-[100px] sm:w-[142px]">
+              <Trophy className="w-6 h-6 sm:w-10 sm:h-10 text-[#E50914]" />
+              <span className="text-[10px] sm:text-sm mt-1 sm:mt-2 text-center">Satisfação Garantida</span>
+            </div>
+            <div className="flex flex-col items-center text-white w-[100px] sm:w-[142px]">
+              <Lock className="w-6 h-6 sm:w-10 sm:h-10 text-[#E50914]" />
+              <span className="text-[10px] sm:text-sm mt-1 sm:mt-2 text-center">Privacidade Protegida</span>
+            </div>
+          </div>
+          
+          <p className="text-lg text-white opacity-90 mb-6 text-center">
+            🔓 Receba 15% de desconto pagando via cartão de crédito.
+          </p>
         </div>
       </div>
     </section>

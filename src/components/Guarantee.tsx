@@ -11,19 +11,19 @@ export const Guarantee: React.FC = () => {
             </div>
           </div>
           
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-            GARANTIA TOTAL DE 7 DIAS
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+            GARANTIA TOTAL DE 30 DIAS
           </h2>
           
           <p className="text-xl mb-6">
-            Se não gostar, devolvemos seu dinheiro <span className="font-bold">sem burocracia</span>!
+            Se não gostar, devolvemos seu dinheiro sem burocracia!
           </p>
           
-          <div className="max-w-md mx-auto">
-            <p className="text-gray-300">
-              Estamos tão confiantes na qualidade do nosso serviço que oferecemos 
-              7 dias de garantia. Se você não ficar satisfeito por qualquer motivo, 
-              basta solicitar o reembolso que devolveremos 100% do seu dinheiro.
+          <div className="max-w-2xl mx-auto">
+            <p className="text-gray-300 text-lg leading-relaxed">
+              Estamos tão confiantes na qualidade do nosso serviço que oferecemos 30 dias de garantia. 
+              Se você não ficar satisfeito por qualquer motivo, basta solicitar o reembolso que 
+              devolveremos 100% do seu dinheiro.
             </p>
           </div>
         </div>
