@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Button } from './Button';
 import { PlayCircle, Shield, Trophy, Lock } from 'lucide-react';
 import backgroundImg from '../images/background.jpg';
 
 export const Hero: React.FC = () => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "https://scripts.converteai.net/ff9f6de5-a5a0-4221-9188-aae68066cbeb/players/68433eac5cfa36f67d47b460/player.js";
+    script.async = true;
+    script.id = "scr_68433eac5cfa36f67d47b460";
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup: remove o script quando o componente for desmontado
+      const existingScript = document.getElementById("scr_68433eac5cfa36f67d47b460");
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
+    };
+  }, []);
+
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center text-center px-4 py-16 md:py-24 overflow-hidden bg-black">
       {/* Gradient overlay */}
@@ -24,7 +40,10 @@ export const Hero: React.FC = () => {
         
         {/* Container do vídeo com proporção 16:9 */}
         <div className="relative w-full max-w-3xl mx-auto mb-8">
-          <div id="vid_68433eac5cfa36f67d47b460" style={{ position: 'relative', width: '100%', padding: '56.25% 0 0' }}>
+          <div 
+            id="vid_68433eac5cfa36f67d47b460" 
+            style={{ position: 'relative', width: '100%', padding: '56.25% 0 0' }}
+          >
             <img 
               id="thumb_68433eac5cfa36f67d47b460" 
               src="https://images.converteai.net/ff9f6de5-a5a0-4221-9188-aae68066cbeb/players/68433eac5cfa36f67d47b460/thumbnail.jpg" 
@@ -41,15 +60,8 @@ export const Hero: React.FC = () => {
                 height: '100%',
                 width: '100%'
               }}
-            ></div>
+            />
           </div>
-          <script
-            type="text/javascript"
-            id="scr_68433eac5cfa36f67d47b460"
-            dangerouslySetInnerHTML={{
-              __html: `var s=document.createElement("script"); s.src="https://scripts.converteai.net/ff9f6de5-a5a0-4221-9188-aae68066cbeb/players/68433eac5cfa36f67d47b460/player.js", s.async=!0,document.head.appendChild(s);`
-            }}
-          />
         </div>
         
         <div className="flex flex-wrap justify-center sm:gap-3 mb-8 text-gray-300 text-lg">
