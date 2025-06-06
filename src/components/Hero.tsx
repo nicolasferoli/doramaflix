@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from './Button';
-import { PlayCircle } from 'lucide-react';
+import { PlayCircle, Shield, Trophy, Lock } from 'lucide-react';
 import backgroundImg from '../images/background.jpg';
 
 export const Hero: React.FC = () => {
@@ -18,26 +18,53 @@ export const Hero: React.FC = () => {
       ></div>
       
       <div className="relative z-20 max-w-5xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white animate-fade-in">
-          🚀 <span className="text-[#E50914]">DORAMAFLIX</span>: TODOS OS DORAMAS E SÉRIES EM UM SÓ LUGAR!
+        <h1 className="text-[1.1rem] leading-5 sm:text-4xl md:text-5xl lg:text-[3rem] font-bold mb-4 text-white animate-fade-in">
+          <span className="text-[#E50914]">DORAMAFLIX</span>: TODAS OS DORAMAS E SÉRIES EXCLUSIVAS EM UM SÓ LUGAR!
         </h1>
         
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-white">
-          🔓 Acesso Imediato via PIX ou Cartão
-        </h2>
-        
-        <div className="flex flex-wrap justify-center gap-3 mb-8 text-gray-300 text-lg">
-          <span className="flex items-center">✅ Ativação na hora</span>
-          <span className="hidden sm:inline">|</span>
-          <span className="flex items-center">✅ Suporte 24/7</span>
-          <span className="hidden sm:inline">|</span>
-          <span className="flex items-center">✅ Sem fidelidade</span>
+        {/* Container do vídeo com proporção 16:9 */}
+        <div className="relative w-full max-w-3xl mx-auto mb-8 aspect-video">
+          <iframe
+            className="absolute inset-0 w-full h-full rounded-lg shadow-lg"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Trailer Doramaflix"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
         
-        <Button href="#secao-planos" className="group flex items-center justify-center gap-2 text-lg px-8 py-4">
+        <div className="flex flex-wrap justify-center sm:gap-3 mb-8 text-gray-300 text-lg">
+          <span className="flex items-center">✅ Ativação na hora</span>
+          <span className="hidden sm:inline">|</span>
+          <span className="flex items-center">✅ Assista de onde quiser (TV ou Celular)</span>
+          <span className="hidden sm:inline">|</span>
+          <span className="flex items-center">✅ Planos que cabem no seu bolso.</span>
+        </div>
+        
+        <Button href="#secao-planos" className="group flex items-center justify-center gap-2 text-lg px-8 py-4 max-w-[600px] mx-auto">
           <PlayCircle className="w-6 h-6 group-hover:animate-pulse" />
           <span className="font-bold">QUERO ASSINAR AGORA!</span>
         </Button>
+        
+        {/* Ícones de garantia */}
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-8 mt-8 mb-6">
+          <div className="flex flex-col items-center text-white w-[100px] sm:w-[142px]">
+            <Shield className="w-6 h-6 sm:w-10 sm:h-10 text-[#E50914]" />
+            <span className="text-[10px] sm:text-sm mt-1 sm:mt-2 text-center">Compra Segura</span>
+          </div>
+          <div className="flex flex-col items-center text-white w-[100px] sm:w-[142px]">
+            <Trophy className="w-6 h-6 sm:w-10 sm:h-10 text-[#E50914]" />
+            <span className="text-[10px] sm:text-sm mt-1 sm:mt-2 text-center">Satisfação Garantida</span>
+          </div>
+          <div className="flex flex-col items-center text-white w-[100px] sm:w-[142px]">
+            <Lock className="w-6 h-6 sm:w-10 sm:h-10 text-[#E50914]" />
+            <span className="text-[10px] sm:text-sm mt-1 sm:mt-2 text-center">Privacidade Protegida</span>
+          </div>
+        </div>
+        
+        <p className="text-lg text-white opacity-90 mb-6 text-center">
+          🔓 Receba 15% de desconto pagando via cartão de crédito.
+        </p>
       </div>
     </section>
   );
