@@ -23,14 +23,33 @@ export const Hero: React.FC = () => {
         </h1>
         
         {/* Container do vídeo com proporção 16:9 */}
-        <div className="relative w-full max-w-3xl mx-auto mb-8 aspect-video">
-          <iframe
-            className="absolute inset-0 w-full h-full rounded-lg shadow-lg"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Trailer Doramaflix"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+        <div className="relative w-full max-w-3xl mx-auto mb-8">
+          <div id="vid_68433eac5cfa36f67d47b460" style={{ position: 'relative', width: '100%', padding: '56.25% 0 0' }}>
+            <img 
+              id="thumb_68433eac5cfa36f67d47b460" 
+              src="https://images.converteai.net/ff9f6de5-a5a0-4221-9188-aae68066cbeb/players/68433eac5cfa36f67d47b460/thumbnail.jpg" 
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              alt="thumbnail"
+            />
+            <div 
+              id="backdrop_68433eac5cfa36f67d47b460" 
+              style={{ 
+                WebkitBackdropFilter: 'blur(5px)',
+                backdropFilter: 'blur(5px)',
+                position: 'absolute',
+                top: 0,
+                height: '100%',
+                width: '100%'
+              }}
+            ></div>
+          </div>
+          <script
+            type="text/javascript"
+            id="scr_68433eac5cfa36f67d47b460"
+            dangerouslySetInnerHTML={{
+              __html: `var s=document.createElement("script"); s.src="https://scripts.converteai.net/ff9f6de5-a5a0-4221-9188-aae68066cbeb/players/68433eac5cfa36f67d47b460/player.js", s.async=!0,document.head.appendChild(s);`
+            }}
+          />
         </div>
         
         <div className="flex flex-wrap justify-center sm:gap-3 mb-8 text-gray-300 text-lg">

@@ -11,6 +11,7 @@ interface PlanProps {
   exclusiveShows?: string[];
   recommended?: boolean;
   bgColor?: string;
+  buttonLink: string;
 }
 
 const Plan: React.FC<PlanProps> = ({ 
@@ -21,7 +22,8 @@ const Plan: React.FC<PlanProps> = ({
   features,
   exclusiveShows,
   recommended = false,
-  bgColor = '#1F1F1F'
+  bgColor = '#1F1F1F',
+  buttonLink
 }) => {
   return (
     <div className={`
@@ -73,7 +75,7 @@ const Plan: React.FC<PlanProps> = ({
       )}
       
       <Button 
-        href="#" 
+        href={buttonLink}
         className="bg-[#E50914] hover:bg-[#E50914]/90 w-full"
       >
         QUERO ESTE PLANO
@@ -119,7 +121,7 @@ export const PricingPlans: React.FC = () => {
           <Plan 
             title="PLANO BASIC"
             originalPrice="R$29,90"
-            currentPrice="R$15,90"
+            currentPrice="R$10,90"
             discount="50%"
             features={[
               "Acesso a +400 séries",
@@ -128,12 +130,13 @@ export const PricingPlans: React.FC = () => {
               "Suporte técnico 24/7"
             ]}
             bgColor="#1F1F1F"
+            buttonLink="https://pay.kirvano.com/da3e68b1-0a47-4298-ac55-5316493714af"
           />
           
           <Plan 
             title="PLANO PRATA"
             originalPrice="R$49,90"
-            currentPrice="R$21,90"
+            currentPrice="R$15,90"
             discount="60%"
             features={[
               "Acesso a +700 séries atualizadas",
@@ -143,12 +146,13 @@ export const PricingPlans: React.FC = () => {
             ]}
             exclusiveShows={prataShows}
             bgColor="#1F1F1F"
+            buttonLink="https://pay.kirvano.com/3a666fd6-ea38-4c63-8c5d-874060b686ed"
           />
 
           <Plan 
             title="PLANO PREMIUM"
             originalPrice="R$97,90"
-            currentPrice="R$29,90"
+            currentPrice="R$19,90"
             discount="60%"
             features={[
               "Acesso a +700 séries atualizadas",
@@ -160,6 +164,7 @@ export const PricingPlans: React.FC = () => {
             exclusiveShows={premiumShows}
             recommended={true}
             bgColor="#1F1F1F"
+            buttonLink="https://pay.kirvano.com/0710d73c-0894-4a4b-abac-72026d45d07e"
           />
         </div>
       </div>
