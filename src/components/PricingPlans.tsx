@@ -76,6 +76,7 @@ const Plan: React.FC<PlanProps> = ({
       
       <Button 
         href={buttonLink}
+        variant="custom"
         className="w-full text-lg font-bold py-4 bg-[#00FF94] hover:bg-[#00FF94]/90 text-black"
       >
         ASSINAR AGORA
