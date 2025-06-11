@@ -124,12 +124,10 @@ export const PricingPlans: React.FC = () => {
             features={[
               "Apenas 1 usuário",
               "+500 Séries completas",
-              "30 dias de acesso",
-              "Qualidade Full HD/4K",
-              "Suporte técnico 24/7"
+              "30 dias de acesso"
             ]}
             bgColor="#1F1F1F"
-            buttonLink="https://pay.kirvano.com/da3e68b1-0a47-4298-ac55-5316493714af"
+            buttonLink="/oferta"
           />
 
           <Plan 
@@ -146,7 +144,7 @@ export const PricingPlans: React.FC = () => {
             exclusiveShows={premiumShows}
             recommended={true}
             bgColor="#1F1F1F"
-            buttonLink="/oferta"
+            buttonLink="https://pay.kirvano.com/eeff9960-893f-4a58-93d4-7c8e527aa223"
           />
         </div>
       </div>
