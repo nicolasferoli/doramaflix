@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Hero } from './components/Hero';
 import { LogoCarousel } from './components/LogoCarousel';
 import { MovieCarousel } from './components/MovieCarousel';
@@ -8,8 +9,9 @@ import { Testimonials } from './components/Testimonials';
 import { PricingPlans } from './components/PricingPlans';
 import { Guarantee } from './components/Guarantee';
 import { FAQ } from './components/FAQ';
+import { OfertaPage } from './components/OfertaPage';
 
-function App() {
+const HomePage = () => {
   useEffect(() => {
     // Update the page title
     document.title = "DoramaFlix: Todos os Filmes e Séries em Um Só Lugar";
@@ -42,6 +44,17 @@ function App() {
       <Guarantee />
       <FAQ />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/oferta" element={<OfertaPage />} />
+      </Routes>
+    </Router>
   );
 }
 

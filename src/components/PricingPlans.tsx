@@ -27,34 +27,34 @@ const Plan: React.FC<PlanProps> = ({
 }) => {
   return (
     <div className={`
-      p-6 rounded-lg transition-transform duration-300 hover:scale-105
-      ${recommended ? 'relative' : ''}
+      p-8 rounded-2xl transition-transform duration-300 hover:scale-105 border-2
+      ${recommended ? 'relative border-[#e50914]' : 'border-gray-700'}
     `}
     style={{ backgroundColor: bgColor }}
     >
       {recommended && (
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#E50914] text-white font-bold py-1 px-4 rounded-full text-sm">
-          Mais vendido
+        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#e50914] text-white font-bold py-1 px-6 rounded-full text-sm">
+          Mais Popular
         </div>
       )}
       
-      <h3 className="text-2xl font-bold mb-4 text-[#E50914]">{title}</h3>
+      <h3 className="text-2xl font-bold mb-6 text-[#e50914]">{title}</h3>
       
-      <div className="mb-4">
-        <span className="line-through text-gray-400">{originalPrice}</span>
-        <div className="flex items-baseline gap-2">
-          <span className="text-3xl font-bold">{currentPrice}</span>
+      <div className="mb-6">
+        <span className="line-through text-gray-400 text-lg">{originalPrice}</span>
+        <div className="flex items-baseline gap-2 mt-2">
+          <span className="text-4xl font-bold text-white">{currentPrice}</span>
           <span className="text-gray-300">/mês</span>
         </div>
-        <span className="inline-block mt-1 bg-[#E50914]/20 text-[#E50914] font-bold px-2 py-1 rounded-sm text-sm">
+        <span className="inline-block mt-3 bg-[#e50914]/20 text-[#e50914] font-bold px-4 py-1 rounded-full text-sm">
           {discount} OFF
         </span>
       </div>
       
-      <ul className="mb-6 space-y-3">
+      <ul className="mb-8 space-y-4">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start">
-            <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
+            <Check className="w-5 h-5 text-[#e50914] mr-3 flex-shrink-0" />
             <span className="text-gray-300">{feature}</span>
           </li>
         ))}
@@ -62,8 +62,8 @@ const Plan: React.FC<PlanProps> = ({
 
       {exclusiveShows && (
         <>
-          <p className="text-gray-300 mb-2">Séries exclusiva inclusas neste plano:</p>
-          <ul className="mb-6 space-y-2">
+          <p className="text-gray-300 mb-3 font-medium">Séries exclusivas inclusas:</p>
+          <ul className="mb-8 space-y-2">
             {exclusiveShows.map((show, index) => (
               <li key={index} className="flex items-center">
                 <span className="mr-2">🎬</span>
@@ -76,12 +76,12 @@ const Plan: React.FC<PlanProps> = ({
       
       <Button 
         href={buttonLink}
-        className="bg-[#E50914] hover:bg-[#E50914]/90 w-full"
+        className="w-full text-lg font-bold py-4 bg-[#00FF94] hover:bg-[#00FF94]/90 text-black"
       >
-        QUERO ESTE PLANO
+        ASSINAR AGORA
       </Button>
 
-      <p className="text-sm text-gray-400 mt-4 text-center">
+      <p className="text-sm text-gray-400 mt-6 text-center">
         Receba +15% de desconto pagando via cartão de crédito.
       </p>
     </div>
@@ -102,69 +102,50 @@ export const PricingPlans: React.FC = () => {
     "The Mafia Boss"
   ];
 
-  const prataShows = [
-    "A vida secreta do meu marido bilionário",
-    "A companheira amaldiçoada do alfa",
-    "Meu mundo termina com você",
-    "Casamento acidental com meu CEO pobre",
-    "Betty aparelhuda - Brace Face Betty"
-  ];
-
   return (
     <section id="secao-planos" className="py-16 bg-black text-white">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-center">
-          ⚡ <span className="text-[#E50914]">PLANOS DISPONÍVEIS</span>
-        </h2>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            Escolha seu <span className="text-[#e50914]">plano ideal</span>
+          </h2>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            Assista aos melhores doramas com qualidade e conforto. Cancele quando quiser.
+          </p>
+        </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start max-w-4xl mx-auto">
           <Plan 
-            title="PLANO BASIC"
+            title="PLANO BÁSICO"
             originalPrice="R$29,90"
             currentPrice="R$10,90"
-            discount="50%"
+            discount="63%"
             features={[
-              "Acesso a +400 séries",
-              "Até 3 telas simultâneas",
+              "Apenas 1 usuário",
+              "+500 Séries completas",
+              "30 dias de acesso",
               "Qualidade Full HD/4K",
               "Suporte técnico 24/7"
             ]}
             bgColor="#1F1F1F"
             buttonLink="https://pay.kirvano.com/da3e68b1-0a47-4298-ac55-5316493714af"
           />
-          
-          <Plan 
-            title="PLANO PRATA"
-            originalPrice="R$49,90"
-            currentPrice="R$15,90"
-            discount="60%"
-            features={[
-              "Acesso a +700 séries atualizadas",
-              "Até 3 telas simultâneas",
-              "Qualidade Full HD/4K",
-              "Suporte técnico 24/7"
-            ]}
-            exclusiveShows={prataShows}
-            bgColor="#1F1F1F"
-            buttonLink="https://pay.kirvano.com/3a666fd6-ea38-4c63-8c5d-874060b686ed"
-          />
 
           <Plan 
             title="PLANO PREMIUM"
-            originalPrice="R$97,90"
-            currentPrice="R$19,90"
-            discount="60%"
+            originalPrice="R$99,90"
+            currentPrice="R$29,90"
+            discount="70%"
             features={[
-              "Acesso a +700 séries atualizadas",
-              "Até 3 telas simultâneas",
+              "Acesso a +1500 séries atualizadas",
+              "Telas Ilimitadas",
               "Qualidade Full HD/4K",
-              "Suporte técnico 24/7",
-              "+1500 séries atualizadas"
+              "Suporte técnico 24/7"
             ]}
             exclusiveShows={premiumShows}
             recommended={true}
             bgColor="#1F1F1F"
-            buttonLink="https://pay.kirvano.com/0710d73c-0894-4a4b-abac-72026d45d07e"
+            buttonLink="/oferta"
           />
         </div>
       </div>
