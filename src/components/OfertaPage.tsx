@@ -54,13 +54,13 @@ export const OfertaPage: React.FC = () => {
         {/* CTA Buttons */}
         <div className="space-y-4">
           <a 
-            href="https://pay.kirvano.com/0710d73c-0894-4a4b-abac-72026d45d07e"
+            href="https://pay.kirvano.com/52d01255-67c6-4868-8b66-235def13f88b"
             className="block w-full bg-[#e50914] hover:bg-[#e50914]/90 text-white py-4 px-6 rounded-lg text-xl font-bold text-center transition-colors"
           >
             SIM, QUERO A OFERTA!
           </a>
           <a 
-            href="https://pay.kirvano.com/eeff9960-893f-4a58-93d4-7c8e527aa223"
+            href="https://pay.kirvano.com/da3e68b1-0a47-4298-ac55-5316493714af"
             className="block w-full text-white py-4 px-6 rounded-lg text-xl  text-center"
           >
             Não! Eu quero o Pacote Básico!
